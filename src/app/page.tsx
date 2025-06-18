@@ -3,6 +3,7 @@ import ContactSection from "@/components/ContactMe";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import LottieAnimation from "@/components/LottieAnimation";
+import PortfolioSection from "@/components/Portfolio";
 
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
 
       {/* About Section */}
       <AboutSection />
+      <PortfolioSection />
       <ContactSection />
       <Footer />
     </main>

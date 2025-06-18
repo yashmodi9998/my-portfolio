@@ -37,8 +37,8 @@ export default function HeroSection() {
   <Button variant="default">Download Resume</Button>
 </Link>
 
-<Link href="https://github.com/yashmodi9998" target="_blank" rel="noopener noreferrer">
-  <Button variant="outline">GitHub Repo</Button>
+<Link href="#contact" rel="noopener noreferrer">
+  <Button variant="outline">Contact Me</Button>
 </Link>
 
       </div>
