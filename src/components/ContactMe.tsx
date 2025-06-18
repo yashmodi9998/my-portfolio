@@ -22,23 +22,23 @@ const [isSending, setIsSending] = useState(false);
     console.log(form);
     emailjs
       .send(
-        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,    
-        process.env.NEXT_PUBLIC_CLIENT_TEMPLATE_ID,  
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID!,    
+        process.env.NEXT_PUBLIC_CLIENT_TEMPLATE_ID!,  
         {
           from_name: form.name,
           from_email: form.email,
           message: form.message,
         },
-        process.env.NEXT_PUBLIC_USER_ID    
+        process.env.NEXT_PUBLIC_USER_ID!    
       );
       emailjs.send(
-  process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
-  process.env.NEXT_PUBLIC_USER_TEMPLATE_ID, 
+  process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID!,
+  process.env.NEXT_PUBLIC_USER_TEMPLATE_ID!, 
   {
     to_name: form.name,
     to_email: form.email,
   },
-  process.env.NEXT_PUBLIC_USER_ID 
+  process.env.NEXT_PUBLIC_USER_ID! 
 )
   .then(() => {
         setForm({ name: "", email: "", message: "" });
