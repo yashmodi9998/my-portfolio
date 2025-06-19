@@ -33,7 +33,7 @@ export default function AboutSection() {
               with a passion for turning ideas into beautiful, functional digital experiences.
             </p>
             <p className="text-muted-foreground">
-              I love building intuitive UIs using React, Tailwind, and ShadCN, and exploring Machine Learning models
+              I love building intuitive UIs using ReactJS, Tailwind, and NodeJS, and exploring Machine Learning models
               that bring intelligence to user interfaces. Let's create something amazing together!
             </p>
           </div>

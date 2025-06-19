@@ -9,7 +9,7 @@ const projects = [
     name: "Cocotracker - Juice Inventory Management",
     description:
       "Manage coconut juice stock efficiently with real-time tracking, sales insights, and simple inventory flow built for small businesses.",
-    image: "/Cocotracker.png",
+    image: "/Home.png",
     github: "https://github.com/yashmodi9998/Cocotracker-frontend",
     live: "https://cocotracker.vercel.app/",
     tech: ["React", "Node.js", "MongoDB", "TailwindCSS"],
@@ -21,7 +21,8 @@ const projects = [
     image: "/dishdiscover.png",
     github: "https://github.com/yashmodi9998/DishDiscover",
     tech: ["React", "Edamam API", "Google Maps API"],
-  },
+  }
+  
 ];
 
 export default function PortfolioSection() {

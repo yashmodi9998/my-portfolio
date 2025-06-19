@@ -123,14 +123,14 @@ const [isSending, setIsSending] = useState(false);
                 <Phone className="text-primary mt-1" />
                 <div>
                   <p className="font-medium">Phone</p>
-                  <p className="text-muted-foreground">+1 (437) 661-8091</p>
+                  <p className="text-muted-foreground"><a href="tel:4376618091">+1 (437) 661-8091</a></p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <MailIcon className="text-primary mt-1" />
                 <div>
                   <p className="font-medium">Email</p>
-                  <p className="text-muted-foreground">yashmodi998@gmail.com</p>
+                  <p className="text-muted-foreground"><a href="mailto:yashmodi998@gmail.com">yashmodi998@gmail.com</a></p>
                 </div>
               </div>
             </CardContent>

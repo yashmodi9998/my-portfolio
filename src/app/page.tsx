@@ -13,7 +13,7 @@ export default function Home() {
 
       {/* Hero + Lottie Section */}
       <section className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-6 py-12">
-        <div className="flex-1 flex flex-col justify-center max-w-lg">
+        <div className="flex-1 flex  justify-center max-w-lg">
           <HeroSection />
         </div>
 

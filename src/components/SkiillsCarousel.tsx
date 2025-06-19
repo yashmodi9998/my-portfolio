@@ -20,8 +20,6 @@ const skills = [
     name: "React",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
-
-
   {
     name: "Node.js",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
