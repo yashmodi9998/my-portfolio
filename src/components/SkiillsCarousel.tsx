@@ -81,10 +81,7 @@ export default function SkillsCarousel() {
           spaceBetween={10} 
           slidesPerView={4} 
           breakpoints={{
-            // 640: {
-            //   slidesPerView: 4, // Small screens (sm)
-            //   spaceBetween: 15,
-            // },
+
             768: {
               slidesPerView: 5, // Medium screens (md)
               spaceBetween: 20,

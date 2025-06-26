@@ -9,7 +9,6 @@ export default function AboutSection() {
     <section id="about" className="py-20 px-4 bg-background">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
 
-        {/* Profile Image */}
         <div className="w-full md:w-1/2 flex justify-center">
           <Image
             src="/YashModi.jpeg"
@@ -20,24 +19,24 @@ export default function AboutSection() {
           />
         </div>
 
-        {/* Text and Icons */}
+      
         <div className="w-full md:w-1/2 flex gap-6 items-center">
       
       
 
-          {/* About text */}
           <div>
             <HeadingText title="About Me" />
             <p className="text-lg text-justify text-muted-foreground justify mb-4">
               I'm <span className="text-[#58A2FF] font-semibold">Yash Modi</span>, a Web Developer and AI Enthusiast
               with a passion for turning ideas into beautiful, functional digital experiences.
             </p>
-            <p className="text-muted-foreground text-justify">
-              I love building intuitive UIs using ReactJS, Tailwind, and NodeJS, and exploring Machine Learning models
-              that bring intelligence to user interfaces. Let's create something amazing together!
+            <p className="text-muted-foreground text-justify mt-4">
+              My journey began with a degree in Computer Engineering from India, where I built a strong technical foundation. 
+              Since then, I’ve contributed to diverse teams—from startups to global firms like TCS—developing full-stack applications and optimizing backend systems. 
+              I recently graduated from Humber College with certificates in AI and Web Development, driven by a passion for blending technology and creativity to build impactful digital solutions.
             </p>
           </div>
-              {/* Icons column */}
+              
           <div className="flex flex-col gap-4 text-2xl">
             <a
               href="https://github.com/yashmodi9998"

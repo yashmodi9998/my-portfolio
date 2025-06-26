@@ -47,7 +47,6 @@ export default function Footer() {
           </a>
         </div>
 
-        {/* Right: Copyright */}
         <div className="mt-4 md:mt-0 text-sm">
           &copy; {new Date().getFullYear()} Yash Modi. All rights reserved.
         </div>

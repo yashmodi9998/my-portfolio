@@ -1,4 +1,3 @@
-// components/DesktopNavbar.tsx
 'use client'
 
 import { HomeIcon, UserIcon, CodeIcon, MailIcon } from "lucide-react";

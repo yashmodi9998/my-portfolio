@@ -31,15 +31,16 @@ const [isSending, setIsSending] = useState(false);
         },
         process.env.NEXT_PUBLIC_USER_ID!    
       );
-      emailjs.send(
-  process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID!,
-  process.env.NEXT_PUBLIC_USER_TEMPLATE_ID!, 
-  {
-    to_name: form.name,
-    to_email: form.email,
-  },
-  process.env.NEXT_PUBLIC_USER_ID! 
-)
+  emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_USER_TEMPLATE_ID!, 
+        {
+          to_name: form.name,
+          to_email: form.email,
+        },
+        process.env.NEXT_PUBLIC_USER_ID! 
+      )
   .then(() => {
         setForm({ name: "", email: "", message: "" });
         setStatus("success");
@@ -96,8 +97,8 @@ const [isSending, setIsSending] = useState(false);
                   />
                 </div>
                <Button type="submit" className="w-full" disabled={isSending}>
-  {isSending ? "Sending..." : "Send Message"}
-</Button>
+                    {isSending ? "Sending..." : "Send Message"}
+                </Button>
                 {status === "success" && (
                   <p className="text-green-600 text-sm">Your message has been sent!</p>
                 )}
