@@ -72,15 +72,28 @@ src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.
 },
 ];
 
-
 export default function SkillsCarousel() {
   return (
-    <div className="w-full py-10 px-4">
+    <div className="w-full py-4 px-2 sm:px-4">
       <div className="max-w-6xl mx-auto">
         <Swiper
           modules={[Autoplay]}
-          spaceBetween={30}
-          slidesPerView={5}
+          spaceBetween={10} 
+          slidesPerView={4} 
+          breakpoints={{
+            // 640: {
+            //   slidesPerView: 4, // Small screens (sm)
+            //   spaceBetween: 15,
+            // },
+            768: {
+              slidesPerView: 5, // Medium screens (md)
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 6, // Large screens (lg)
+              spaceBetween: 30,
+            },
+          }}
           loop={true}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           allowTouchMove={true}
@@ -91,7 +104,7 @@ export default function SkillsCarousel() {
                 src={skill.src}
                 alt={skill.name}
                 title={skill.name}
-                className="h-11 w-auto object-contain filter"
+                className="h-8 w-auto object-contain sm:h-10 md:h-11"
               />
             </SwiperSlide>
           ))}

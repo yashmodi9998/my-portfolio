@@ -28,11 +28,11 @@ export default function AboutSection() {
           {/* About text */}
           <div>
             <HeadingText title="About Me" />
-            <p className="text-lg text-muted-foreground mb-4">
+            <p className="text-lg text-justify text-muted-foreground justify mb-4">
               I'm <span className="text-[#58A2FF] font-semibold">Yash Modi</span>, a Web Developer and AI Enthusiast
               with a passion for turning ideas into beautiful, functional digital experiences.
             </p>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground text-justify">
               I love building intuitive UIs using ReactJS, Tailwind, and NodeJS, and exploring Machine Learning models
               that bring intelligence to user interfaces. Let's create something amazing together!
             </p>
