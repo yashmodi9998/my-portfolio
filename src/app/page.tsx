@@ -1,4 +1,5 @@
 import AboutSection from "@/components/AboutMe";
+import ChatBotLauncher from "@/components/Chat-bot";
 import ContactSection from "@/components/ContactMe";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
@@ -26,6 +27,7 @@ export default function Home() {
       <AboutSection />
       <PortfolioSection />
       <ContactSection />
+      <ChatBotLauncher />
       <Footer />
     </main>
   );

@@ -11,7 +11,7 @@ export default function AboutSection() {
 
         <div className="w-full md:w-1/2 flex justify-center">
           <Image
-            src="/YashModi.jpeg"
+            src="/YashModi.png"
             alt="Profile"
             width={300}
             height={300}
