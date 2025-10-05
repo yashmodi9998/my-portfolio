@@ -21,7 +21,23 @@ const projects = [
     image: "/dishdiscover.png",
     github: "https://github.com/yashmodi9998/DishDiscover",
     tech: ["React", "Edamam API", "Google Maps API"],
-  }
+  },
+  {
+    name: "YM Agency - Job Portal",
+    description:
+      "Job portal connecting job seekers with employers, featuring search, application tracking, and user profiles.",
+    image: "/YMAgency.png",
+    github: "https://github.com/yashmodi9998/JobAgency",
+    tech:['PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
+  live:"https://ymagency.infinityfreeapp.com/"
+  },
+{
+  name:"Fitness Hub Stays",
+  description:"A comprehensive hotel booking website that allows users to search, view, and book hotels with ease.",
+  image:"/FitnessHubStays.jpg",
+  github:"https://github.com/yashmodi9998/FitnessHubStays",
+  tech:["C##","MVC","Entity Framework","SQL Server",]
+}
   
 ];
 
