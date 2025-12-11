@@ -4,7 +4,6 @@ import ContactSection from "@/components/ContactMe";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import LottieSection from "@/components/LottieAnimation";
-import LottieAnimation from "@/components/LottieAnimation";
 import PortfolioSection from "@/components/Portfolio";
 
 
