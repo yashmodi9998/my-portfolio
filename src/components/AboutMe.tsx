@@ -26,10 +26,10 @@ export default function AboutSection() {
 
           <div>
             <HeadingText title="About Me" />
-            <p className="text-lg text-justify justify mb-4">
-              I'm <span className="text-[#58A2FF] font-semibold">Yash Modi</span>, a Web Developer and AI Enthusiast
-              with a passion for turning ideas into beautiful, functional digital experiences.
-            </p>
+          <p className="text-justify mb-4">
+    I&apos;m <span className="text-[#58A2FF] font-semibold">Yash Modi</span>, a developer and problem-solver
+    passionate about creating meaningful digital experiences and improving processes through thoughtful solutions.
+  </p>
             <p className="text-justify mt-4">
             I began my journey with a degree in Computer Engineering in India, which provided me with a strong technical foundation. Since then I have worked with a variety of teams, including startups and global companies such as TCS, where I focused on building full-stack applications and improving backend systems. Most recently I earned certificates in AI and Web Development from Humber College, driven by my passion for combining technology and creativity to deliver impactful digital solutions.
             </p>
