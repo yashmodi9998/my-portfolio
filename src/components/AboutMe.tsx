@@ -11,10 +11,10 @@ export default function AboutSection() {
 
         <div className="w-full md:w-1/2 flex justify-center">
           <Image
-            src="/YashModi.png"
+            src="/ym.png"
             alt="Profile"
-            width={300}
-            height={300}
+            width={400}
+            height={400}
             className="rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105 hover:shadow-2xl"
           />
         </div>
@@ -26,11 +26,11 @@ export default function AboutSection() {
 
           <div>
             <HeadingText title="About Me" />
-            <p className="text-lg text-justify text-muted-foreground justify mb-4">
+            <p className="text-lg text-justify justify mb-4">
               I'm <span className="text-[#58A2FF] font-semibold">Yash Modi</span>, a Web Developer and AI Enthusiast
               with a passion for turning ideas into beautiful, functional digital experiences.
             </p>
-            <p className="text-muted-foreground text-justify mt-4">
+            <p className="text-justify mt-4">
             I began my journey with a degree in Computer Engineering in India, which provided me with a strong technical foundation. Since then I have worked with a variety of teams, including startups and global companies such as TCS, where I focused on building full-stack applications and improving backend systems. Most recently I earned certificates in AI and Web Development from Humber College, driven by my passion for combining technology and creativity to deliver impactful digital solutions.
             </p>
           </div>
