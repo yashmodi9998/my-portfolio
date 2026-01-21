@@ -49,7 +49,7 @@ export default function ChatBotLauncher() {
 
       const data = await res.json();
       setMessages([...newMessages, { role: "assistant", text: data.reply }]);
-    } catch (err) {
+    } catch {
       setMessages([...newMessages, { role: "assistant", text: "Oops! Something went wrong." }]);
     } finally {
       setLoading(false);

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import OpenAI from "openai";
 
 const resumeText = `
 Yash Modi
@@ -14,13 +14,18 @@ Full Stack Developer with 3+ years of experience building responsive, high-perfo
 Technical Skills:
 Frontend: HTML, CSS, Tailwind CSS, Bootstrap, JavaScript, React.js
 Backend & APIs: Node.js, Express.js, PHP, Laravel, Python, RESTful APIs, JWT, OAuth, Next.js
-Databases: MySQL, MongoDB, SQL
+Databases: MySQL, MongoDB, PorstgreSQL 
 Tools & Platforms: Git, GitHub, WordPress, JSON, XML, AJAX, Docker
 Machine Learning: Regression, Classification, TensorFlow, PyTorch, Pandas, NumPy, Hugging Face
 
 Professional Experience:
-Machine Learning Intern – Waypoint Healthcare, Toronto, ON (Jan 2025 – Apr 2025)
-Web Developer – Kids World Record Media, Toronto, ON				Apr 2024 – Aug 2024
+
+Data Engineer Intern – Waypoint Healthcare, Toronto, ON (Jan 2025 – Apr 2025)
+•	Built machine learning models to predict patient wait times using historical healthcare operations data
+•	Engineered and transformed time-based features from referral, decision, and admission events
+•	Implemented and compared regression models including Linear Regression, Random Forest, XGBoost, and LSTM networks for sequence-based prediction
+•	Evaluated model performance using MAE and MSE to assess accuracy and stability across approaches.
+Web Developer Intern – Kids World Record Media, Toronto, ON				Apr 2024 – Aug 2024
 •	Designed and deployed scalable TypeScript APIs to integrate external platforms, increasing data flow efficiency by 35% and reducing response time. 
 •	Developed React apps using MERN stack and integrated NextJS principles to enhance routing and performance.
 •	Integrated RESTful APIs with asynchronous calls to dynamically fetch and update UI data in real time. 
@@ -45,52 +50,49 @@ Bachelor of Engineering in Computer Engineering – CKPCET, Gujarat, India (Aug 
 `;
 
 
-const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY!);
-const model = genAI.getGenerativeModel({ model: "gemma-3n-e4b-it" });
-
+// Initialize OpenAI client
+const openai = new OpenAI({
+  apiKey: process.env.OPEN_AI_API_KEY,
+});
 export async function POST(req: Request) {
   try {
     const { message } = await req.json();
 
     const prompt = `
-You are Yash Modi's professional portfolio assistant. 
-Use ONLY the information provided in the resume below to answer the user's question. 
-Do not tell the user that you are an AI model and do not mention the resume.if something is not on resume stat as "I don't know".
-Do NOT invent any details or provide information not in the resume. Understand user questions and respond concisely and professionally as Yash would.
-Do NOT copy text directly from the resume; rephrase the information naturally and answer concisely and professionally as Yash would.
-Write in a approachable and friendly tone, as if you are having a casual conversation with the user.
+### ROLE
+You are Yash Modi. You are a Full Stack Developer based in Toronto. Respond to the user as if you are having a professional, friendly chat.
 
-Resume:
+### CONSTRAINTS
+- SOURCES: Use ONLY the provided resume. If info is missing, say "I'm not sure about that, but feel free to reach out to me directly!"
+- IDENTITY: Never mention you are an AI or a "resume assistant." Use "I", "me", and "my".
+- FORMAT: Do not use "Yash:" prefixes. Just give the direct answer.
+
+### KNOWLEDGE BASE (RESUME)
 ${resumeText}
 
-User question:
+### USER QUERY
 ${message}
 
 Answer:
 `;
 
-    const result = await model.generateContent({
-      contents: [
-        {
-          role: "user",
-          parts: [
-            {
-              text: prompt,
-            },
-          ],
-        },
+    const response = await openai.chat.completions.create({
+      model: "gpt-4o-mini", 
+      messages: [
+        { role: "system", content: "You are a helpful assistant." },
+        { role: "user", content: prompt }
       ],
+      temperature: 0.7,
     });
 
-    const reply = (await result.response.text())?.trim() || "I don’t know";
+    const reply = response.choices[0].message.content?.trim() || "I don't know";
 
     return NextResponse.json({ reply });
-  } catch (err) {
-    console.error("Chat-bot API error:", err);
+  } catch (err: unknown) {
+    console.error("OpenAI API error:", err);
     return NextResponse.json(
-      { reply: "Something went wrong. Check your Gemini API key or usage." },
+      { reply: "Something went wrong with the AI connection." },
       { status: 500 }
     );
   }
 }
-
